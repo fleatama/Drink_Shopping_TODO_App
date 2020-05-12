@@ -1,0 +1,17 @@
+<%= form_with(model: drinkuser, local: true) do |form| %>
+  <% if drinkuser.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(drinkuser.errors.count, "error") %> prohibited this drinkuser from being saved:</h2>
+
+      <ul>
+        <% drinkuser.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
